@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button type="button" onclick= "carChoose()"> Choose </button>
+    <input type ="text" id="textName" value="">
+    <!--input değerine göre img kaynağı değişecek -->
+    <img id="carImg" src= "" /> 
+    <img id="carImg2" src= "" /> 
+    <img id="carImg3" src= "" />
+     
+    <script>
+        function carChoose(){
+            var input= document.getElementById("textName");
+            var img = document.getElementById("carImg");
+            var img2 = document.getElementById("carImg2");
+            var img3 = document.getElementById("carImg3");
+            img.src = "";
+            img2.src = "";
+            img3.src = "";
+            if(input.value == "Volvo"){
+                img.src= "volvo1.png"; 
+            }
+            else if(input.value == "Skoda"){
+                img.src= "skoda1.png";
+                img2.src= "scoda2.png";
+            }
+            else{
+                img.src= "ford1.png";
+                img2.src= "ford2.png";
+                img3.src= "ford3.png";
+            }
+        }
+    </script>
+</body>
+</html>
